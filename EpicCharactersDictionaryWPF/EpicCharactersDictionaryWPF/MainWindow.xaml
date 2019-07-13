@@ -1,0 +1,26 @@
+﻿<Window x:Class="EpicCharactersDictionaryWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EpicCharactersDictionaryWPF"
+        mc:Ignorable="d"
+        Title="Epic Characters Dictionary" Height="955.073" Width="1285.073">
+    <Grid Margin="0,0,0,-2" HorizontalAlignment="Left" Width="1414">
+
+        <StackPanel Margin="0,0,776,284">
+            <Label Content="Story" HorizontalAlignment="Left" Margin="22,80,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="66"/>
+            <ComboBox x:Name ="storyList" SelectedValuePath="StoryTitle" SelectionChanged="StoryList_SelectionChanged" HorizontalAlignment="Left" Margin="22,0,0,0" VerticalAlignment="Top" Width="378" Height="32" Text="-- All --" IsEditable="True"  FontSize="18"/>
+            <Button Content="Go" Click="go_story_button" HorizontalAlignment="Left" Margin="500,-30,0,0" VerticalAlignment="Top" Width="41" Height="27" FontSize="15" RenderTransformOrigin="0.5,0.5"/>
+            <Button Content="Create Story"  Click="create_story_button" HorizontalAlignment="Left" Margin="200,357,0,0" VerticalAlignment="Top" Width="192" Height="42" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" Width="596" Margin="642,4,0,0" Height="636" VerticalAlignment="Top">
+            <Label Content="Characters" HorizontalAlignment="Left" Margin="22,82,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="126"/>
+            <ComboBox x:Name ="charactersList" SelectedValuePath="FirstName" SelectionChanged="CharactersList_SelectionChanged" Margin="22,0,0,0" VerticalAlignment="Top" Height="30" Text = "-- A-Z --" IsEditable="True" FontSize="18" HorizontalAlignment="Left" Width="376"/>
+            <Button Content="Go" Click="go_char_button" HorizontalAlignment="Left" Margin="500,-30,0,0" VerticalAlignment="Top" Width="41" Height="27" FontSize="15" RenderTransformOrigin="0.5,0.5"/>
+            <Button Content="Create Character"  Click="create_char_button" Margin="200,357,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="192" Height="42" FontSize="24" RenderTransformOrigin="0.5,0.5"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
